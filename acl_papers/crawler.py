@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 
 from bs4 import BeautifulSoup
-from typing import List
+from typing import List, Dict
 
 
 
@@ -11,6 +11,7 @@ def crawling(url:str):
     resp = requests.get(url)
     soup = BeautifulSoup(resp.text, 'html.parser')
     return soup
+
 
 def load_or_create_df(path:str, columns:List['str']):
     if os.path.exists(path):
@@ -24,12 +25,13 @@ def load_or_create_df(path:str, columns:List['str']):
 
     return df
 
-def update_dataframe(path: str, columns:list, new_rows:List['str']):
+
+def update_dataframe(path: str, columns:list, new_rows:List[Dict]):
     df = load_or_create_df(path=path, columns=columns)
     new_df = pd.DataFrame(new_rows, columns=columns)
-
+    
     df = pd.concat([df, new_df], ignore_index=True)
-
+    
     df.to_csv(path, index=False)
 
 
