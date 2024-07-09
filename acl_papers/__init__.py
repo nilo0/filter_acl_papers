@@ -1,5 +1,9 @@
 __version__ = '0.1.0'
 import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 
 current_file_path = os.path.abspath(__file__)
