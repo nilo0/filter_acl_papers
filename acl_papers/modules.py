@@ -35,3 +35,11 @@ def update_dataframe(path: str, columns:list, new_rows:List[Dict]):
     df.to_csv(path, index=False)
 
 
+def check_relevant(text:str) -> bool:
+    text_lower = text.lower()
+    if "relevant" in text_lower and "irrelevant" not in text_lower:
+        return True
+    elif "irrelevant" in text_lower:
+        return False
+    else:
+        return None

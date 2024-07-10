@@ -30,6 +30,3 @@ def analyse_abstract(abstract:str, model:str):
     )
   
   return completion.choices[0].message.content
-
-result = analyse_abstract(abstract=text, model=MODEL)
-print(result, "boobooli boobool", type)

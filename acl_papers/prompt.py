@@ -6,11 +6,9 @@ You are given the abstract of a scientific paper. Your goal is to determine whet
 3. Scientific Argument Mining
 4. Citation Context Analysis
 5. Topic Modeling and Clustering
-6. Text Summarization
-7. Semantic Similarity and Document Matching
-8. Trend Analysis in Research
-9. Research Question Generation and Analysis
-10. Claim Detection and Verification
+6. Trend Analysis in Research
+7. Research Question Generation and Analysis
+8. Claim Detection and Verification
 
 Instructions: For each abstract provided, perform the following:
 
