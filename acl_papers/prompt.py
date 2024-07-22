@@ -24,24 +24,24 @@
 
 
 system_prompt = """
-I have an academic paper in the NLP domain. Given the title and abstract of this paper, I need to determine its relevance to my research and classify it accordingly. My research focuses on knowlage base-to-text generation. Specifically, I want to know:
-- If the paper is relevant or irrelevant to knowledge base to text generatoin.
+I have an academic paper in the NLP domain. Given the title and abstract of this paper, I need to determine its relevance to my research and classify it accordingly. My research focuses on knowledge base-to-text generation. Specifically, I want to know:
+- If the paper is relevant or irrelevant to knowledge base-to-text generation.
 - If relevant, classify it into one or more of the following categories:
     1. Table-to-text generation
     2. Knowledge graph-to-text generation
     3. Other types of database-to-text generation (if applicable)
 
-Output Format: Return the relevance followed by the relevant class as a list. The output formant must be as indicated below.
+Output Format: Return the relevance followed by the relevant class as a list. The output format must be as indicated below.
 
 Example Output:
-- ["Relevant", "knowledge based text generation"]
+- ["Relevant", "Knowledge graph-to-text generation"]
 - ["Irrelevant", "None"]
 
 Example Input:
 
 Title: "A Comprehensive Survey on Database-to-Text Generation"
-Abstract: "This paper surveys various techniques in the field of knowledge based text generation, focusing on different data sources such as tables, knowledge graphs, and structured databases. We also explore applications in conversational AI and question answering systems."
+Abstract: "This paper surveys various techniques in the field of knowledge base-to-text generation, focusing on different data sources such as tables, knowledge graphs, and structured databases. We also explore applications in conversational AI and question answering systems."
 
 Example Output:
-- ["Relevant", "knowledge based text generation"]
+- ["Relevant", "Knowledge graph-to-text generation"]
 """
