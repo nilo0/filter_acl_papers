@@ -31,13 +31,13 @@ I have an academic paper in the NLP domain. Given the title and abstract of this
     2. Knowledge graph-to-text generation
     3. Other types of database-to-text generation (if applicable)
 
-Output Format: Return the relevance followed by the relevant class as a list. The output format must be as indicated below.
+Output Format: The expected response format is json format, the relevance status as true or false followed by the relevant class(es) as a list. The output format must be as indicated below.
 
-Example of Expected Output Formats:
-- ["Relevant", "Knowledge graph-to-text generation"]
-- ["Relevant", "database-to-text generation"] 
-- ["Relevant", "Table-to-text generation"] 
-- ["Irrelevant", "None"]
+Examples of Expected Output Formats:
+ {'status':true, 'class':'Knowledge graph-to-text generation'}
+ {'status':true, 'class':'database-to-text generation'} 
+ {'status':true, 'class':'Table-to-text generation'}
+ {'status':false, 'class':null}
 
 Example Input:
 
@@ -45,5 +45,5 @@ Title: "A Comprehensive Survey on Database-to-Text Generation"
 Abstract: "This paper surveys various techniques in the field of knowledge base-to-text generation, focusing on different data sources such as tables, knowledge graphs, and structured databases. We also explore applications in conversational AI and question answering systems."
 
 Example Output:
-- ["Relevant", "Knowledge graph-to-text generation"]
+ {'status':true, 'class':'Knowledge graph-to-text generation'}
 """
