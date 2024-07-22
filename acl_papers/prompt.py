@@ -33,8 +33,10 @@ I have an academic paper in the NLP domain. Given the title and abstract of this
 
 Output Format: Return the relevance followed by the relevant class as a list. The output format must be as indicated below.
 
-Example Output:
+Example of Expected Output Formats:
 - ["Relevant", "Knowledge graph-to-text generation"]
+- ["Relevant", "database-to-text generation"] 
+- ["Relevant", "Table-to-text generation"] 
 - ["Irrelevant", "None"]
 
 Example Input:

@@ -7,7 +7,7 @@ from acl_papers.prompt import system_prompt
 MODEL="gpt-3.5-turbo"
 
 
-def analyse_abstract(abstract:str, model:str):
+def analyse_abstract(title:str, abstract:str, model:str):
   
   OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
@@ -16,7 +16,7 @@ def analyse_abstract(abstract:str, model:str):
 
   message = [
         {"role":"system", "content":system_prompt},
-        {"role":"user", "content":f"Abstract: {abstract}"}
+        {"role":"user", "content":f"Title:{title} \n Abstract: {abstract}"}
   ]
 
   OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
